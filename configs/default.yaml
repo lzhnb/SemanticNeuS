@@ -1,0 +1,9 @@
+model:
+    level: 6
+    sh_degree: 4
+    sdf_n_layers: 8
+    sdf_skip_in:
+        - 4
+    rgb_n_layers: 4
+    dim_geo: 128
+    init_val: 0.3

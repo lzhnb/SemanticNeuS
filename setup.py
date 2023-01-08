@@ -1,4 +1,4 @@
-# Copyright (c) Gorilla-Lab. All rights reserved.
+# Copyright (c) Zhihao Liang. All rights reserved.
 import os
 import subprocess
 import sys
@@ -74,8 +74,8 @@ setup(
     version=__version__,
     author="Zhihao Liang",
     author_email="eezhihaoliang@mail.scut.edu.cn",
-    description="Scene Reconstruction of Gorilla-Lab",
-    long_description="Scene Reconstruction of Gorilla-Lab",
+    description="Semantic NeuS",
+    long_description="Semantic NeuS",
     packages=find_packages(),
     ext_modules=[CMakeExtension(name="semneus.libaccvr")],
     cmdclass={"build_ext": cmake_build_ext},

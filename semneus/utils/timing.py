@@ -110,31 +110,3 @@ class Timer:
         """
         self._is_running = False
         self.start()
-
-
-_g_timers = {}  # global timers
-
-
-def check_time(timer_id: str) -> float:
-    """Add check points in a single line.
-    This method is suitable for running a task on a list of items. A timer will
-    be registered when the method is called for the first time.
-    :Example:
-    >>> import time
-    >>> import gorilla
-    >>> for i in range(1, 6):
-    >>>     # simulate a code block
-    >>>     time.sleep(i)
-    >>>     gorilla.check_time("task1")
-    2.000
-    3.000
-    4.000
-    5.000
-    Args:
-        timer_id (str): Timer identifier.
-    """
-    if timer_id not in _g_timers:
-        _g_timers[timer_id] = Timer()
-        return 0
-    else:
-        return _g_timers[timer_id].since_last()
